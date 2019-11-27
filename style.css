@@ -4,6 +4,7 @@
 
 body {
 	font-family: Bookman !important;
+	font-size: x-large !important;
 	color: black;
 }
 
@@ -73,9 +74,7 @@ img {
 	background-size: cover;
 	background-position: center;
 	position: relative;
-	margin-left: -35% !important;
-	margin-right: -35% !important;
-	margin-bottom: 5% !important;
+	margin-bottom: 5%;
 }
 .hg:before	{
 	content: '';
@@ -88,8 +87,6 @@ img {
 }
 
 .layer h1 {
-	margin-left: 17% !important;
-	margin-right: 17% !important;
 	color: black;
 	position: relative;
 }
