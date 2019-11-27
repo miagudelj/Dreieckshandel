@@ -106,3 +106,9 @@ img {
 #weizen {
 	width: 40%;
 }
+
+/* Quellen */
+.quellen .container a {
+	text-decoration: none !important;
+	color: blue !important;
+}
