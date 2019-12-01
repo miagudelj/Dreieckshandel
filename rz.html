@@ -16,7 +16,7 @@
 		<!-- binding javascript -->
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 		<!-- binding own javascript file -->
-		<script src="#"></script>
+		<script src="umrechner.js"></script>
 		
 		<!-- binding special fonts -->
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Bookman">
@@ -98,13 +98,13 @@
 							</div>
 						</div>
 				
-						<!-- Baumwolle -->
+						<!-- Rohrzucker -->
 						<div class="row">
 							<div class="col-3">
 								<input id="rohrzucker" type="number" name="anzRohrzucker" min="1">
 							</div>
 							<div class="col-3">
-								<legend>Rohrzucker</legend>
+								<legend>kg Rohrzucker</legend>
 							</div>
 							<div class="col-3">
 								<input id="dollar" type="text" name="preis" disabled>
@@ -114,7 +114,7 @@
 							</div>
 						</div>
 						
-						<!-- Schmuck -->
+						<!-- Rum -->
 						<div class="row">
 							<div class="col-3">
 								<input id="rum" type="number" name="anzRum" min="1">
@@ -127,6 +127,13 @@
 							</div>
 							<div class="col-3">
 								<legend>Dollar</legend>
+							</div>
+						</div>
+						
+						<!-- berechnen Knopf-->
+						<div class="row">
+							<div class="col-3">
+								<button class="btn" type="button" id="calculate">Berechnen</button> 
 							</div>
 						</div>
 					</div>
