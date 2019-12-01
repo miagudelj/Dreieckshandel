@@ -4,7 +4,7 @@
 
 body {
 	font-family: Bookman !important;
-	font-size: large !important;
+	/*font-size: large !important;*/
 	color: black;
 }
 
@@ -13,7 +13,7 @@ a {
 	color: black !important;
 }
 
-img {
+img, input, legend {
 	width: 100% !important;
 }
 
@@ -103,8 +103,8 @@ img {
 	position: center;
 }
 
-#weizen {
-	width: 40%;
+legend {
+	font-size: small !important;
 }
 
 /* Quellen */
