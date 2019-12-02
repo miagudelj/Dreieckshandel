@@ -80,67 +80,73 @@
 				</div>
 				<hr/>
 				<div class="row">
-					<div class="col-7">
+					<div class="col-6">
 						<!-- Sklaven -->
 						<div class="row">
-							<div class="col-3">
-								<input id="skl" type="number" name="anzSklaven" min="1">
-							</div>
-							<div class="col-3">
+							<div class="col-12">
 								<legend>Sklaven</legend>
 							</div>
-							<div class="col-3">
-								<input id="dollar" type="text" name="preis" disabled>
-							</div>
-							<div class="col-3">
-								<legend>dollar</legend>
+							<div class="col-12">
+								<input id="skl" type="number" name="anzSklaven" value="0" min="1">
 							</div>
 						</div>
 				
 						<!-- Baumwolle -->
 						<div class="row">
-							<div class="col-3">
-								<input id="bw" type="number" name="anzBaumwolle" min="1">
+							<div class="col-12">
+								<legend>kg Baumwolle</legend>
 							</div>
-							<div class="col-3">
-								<legend>Baumwolle</legend>
-							</div>
-							<div class="col-3">
-								<input id="dollar" type="text" name="preis" disabled>
-							</div>
-							<div class="col-3">
-								<legend>dollar</legend>
+							<div class="col-12">
+								<input id="bw" type="number" name="anzBaumwolle" value="0" min="1">
 							</div>
 						</div>
 						
 						<!-- Schmuck -->
 						<div class="row">
-							<div class="col-3">
-								<input id="kleidung" type="number" name="anzKleidung" min="1"> 
+							<div class="col-12">
+								<legend>kg Kleidung</legend>
 							</div>
-							<div class="col-3">
-								<legend>Kleidung</legend>
+							<div class="col-12">
+								<input id="kleidung" type="number" name="anzKleidung" value="0" min="1"> 
 							</div>
+						</div>
+						
+						<div class="row">
+							<!-- Dollar -->
 							<div class="col-3">
 								<input id="dollar" type="text" name="preis" disabled>
 							</div>
 							<div class="col-3">
-								<legend>dollar</legend>
+								<legend>Dollar</legend>
 							</div>
+							<!-- Brot -->
+							<div class="col-3">
+								<input id="brot" type="text" name="preis" disabled>
+							</div>
+							<div class="col-3">
+								<legend>kg Brot</legend>
+							</div>
+						</div>
+					</div>
+					<div class="col-6">
+							<a class="nav-link" href="img/Dreieckshandel_bw.png">
+								<img src="img/Dreieckshandel_bw.png" alt="Dreieckshandel">
+							</a>
+					</div>
+					<div class="row">
+						<!-- berechnen Knopf-->
+						<div class="col-5">
+							<button class="btn" type="button" id="calculate">Berechnen</button> 
+						</div>
+						
+						<div class="col-2">
+							
 						</div>
 						
 						<!-- berechnen Knopf-->
-						<div class="row">
-							<div class="col-3">
-								<button class="btn" type="button" id="calculate">Berechnen</button> 
-							</div>
+						<div class="col-5">
+							<button class="btn" type="button" id="reset">Reset</button> 
 						</div>
-					</div>
-					<div class="col-1">
-						
-					</div>
-					<div class="col-4">
-						<img src="img/Dreieckshandel_bw.png" alt="Dreieckshandel">
 					</div>
 				</div>				
 			</div>

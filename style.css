@@ -106,6 +106,10 @@ img, input, legend {
 legend {
 	font-size: small !important;
 }
+input {
+	padding: 1%;
+	border: solid gray 1px;
+}
 
 /* Quellen */
 .quellen .container a {

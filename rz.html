@@ -81,67 +81,73 @@
 				
 				<hr/>
 				<div class="row">
-					<div class="col-7">
+					<div class="col-6">
 						<!-- Sklaven -->
 						<div class="row">
-							<div class="col-3">
-								<input id="skl" type="number" name="anzSklaven" min="1">
-							</div>
-							<div class="col-3">
+							<div class="col-12">
 								<legend>Sklaven</legend>
 							</div>
-							<div class="col-3">
-								<input id="dollar" type="text" name="preis" disabled>
-							</div>
-							<div class="col-3">
-								<legend>Dollar</legend>
+							<div class="col-12">
+								<input id="skl" type="number" name="anzSklaven" value="0" min="1">
 							</div>
 						</div>
 				
 						<!-- Rohrzucker -->
 						<div class="row">
-							<div class="col-3">
-								<input id="rz" type="number" name="anzRohrzucker" min="1">
-							</div>
-							<div class="col-3">
+							<div class="col-12">
 								<legend>kg Rohrzucker</legend>
 							</div>
-							<div class="col-3">
-								<input id="dollar" type="text" name="preis" disabled>
-							</div>
-							<div class="col-3">
-								<legend>Dollar</legend>
+							<div class="col-12">
+								<input id="rz" type="number" name="anzRohrzucker" value="0" min="1">
 							</div>
 						</div>
 						
 						<!-- Rum -->
 						<div class="row">
-							<div class="col-3">
-								<input id="rum" type="number" name="anzRum" min="1">
-							</div>
-							<div class="col-3">
+							<div class="col-12">
 								<legend>Liter Rum</legend>
 							</div>
+							<div class="col-12">
+								<input id="rum" type="number" name="anzRum" value="0" min="1">
+							</div>
+						</div>
+						
+						<div class="row">
+							<!-- Dollar -->
 							<div class="col-3">
 								<input id="dollar" type="text" name="preis" disabled>
 							</div>
 							<div class="col-3">
 								<legend>Dollar</legend>
 							</div>
-						</div>
-						
-						<!-- berechnen Knopf-->
-						<div class="row">
+							<!-- Brot -->
 							<div class="col-3">
-								<button class="btn" type="button" id="calculate">Berechnen</button> 
+								<input id="brot" type="text" name="preis" disabled>
+							</div>
+							<div class="col-3">
+								<legend>kg Brot</legend>
 							</div>
 						</div>
 					</div>
-					<div class="col-1">
-						
+					<div class="col-6">
+							<a class="nav-link" href="img/Dreieckshandel_rz.png">
+								<img src="img/Dreieckshandel_rz.png" alt="Dreieckshandel">
+							</a>
 					</div>
-					<div class="col-4">
-						<img src="img/Dreieckshandel_rz.png" alt="Dreieckshandel">
+					<div class="row">
+						<!-- berechnen Knopf-->
+						<div class="col-5">
+							<button class="btn" type="button" id="calculate">Berechnen</button> 
+						</div>
+						
+						<div class="col-2">
+							
+						</div>
+						
+						<!-- berechnen Knopf-->
+						<div class="col-5">
+							<button class="btn" type="button" id="reset">Reset</button> 
+						</div>
 					</div>
 				</div>		
 			</div>
