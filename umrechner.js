@@ -5,7 +5,7 @@
  * @since   2019-12-01
  * @version 1.0
  */
-$(document).ready(function()    {
+/*$(document).ready(function()    {
 	
 	$("#calculate").on("click", function() {
 		
@@ -47,7 +47,7 @@ $(document).ready(function()    {
 	// });
 });
 
-});
+});*/
 $(document).ready(function()    {
 	
 	// jquery event attachment 
@@ -55,45 +55,53 @@ $(document).ready(function()    {
 	
 	function calculate(){
 		
-		//inputs from user
-		var sklavenValue = $("#sklaven").val();
-		var zuckerValue = $("#rohrzucker").val();
-		var rumValue = $("#rum").val();
-		var baumwolleValue = $("#baumwolle").val();
-		var schmuckValue = $("#schmuck").val();
+		// inputs from user
+		var sklaven = $("#skl").val();
+		var rz = $("#rz").val();
+		var rum = $("#rum").val();
+		var bw = $("#bw").val();
+		var kleidung = $("#kleidung").val();
 		
-		var sklavenPreis = 357;
-		var ZuckerPreis = 0.4;
-		var rumPreis = 0.095;
-		var baumwollePreis = 53;
-		var brotPreis = 0.24;
+		// values
+		var dollerSkl = 50.25;
+		var dollarRum = 110.038;
+		var dollarRz = 0.23148;
+		var dollarBw = 5.39;
+		var dollarKleidung = 0.68508;
 		
-		console.log("INFOS: " + sklavenValue + ";" + zuckerValue + ";" + rumValue + ";" + baumwolleValue + ";" + schmuckValue);
-		if (sklavenValue) {
+		var brot = 0.24;
+		
+		var dollar = $("#dollar").val();
+		
+		//console.log("INFOS: " + sklaven + ";" + rz + ";" + rum + ";" + bw + ";" + kleidung);
+		
+		if (sklaven >= 1) {
 			
-			if (pwValue === "1234") {
+			$("#dollar").val() === sklaven*dollarSkl;
+			$("#rz").val() == dollar/dollarRz;
+			$("#rum").val() = dollar/dollarRum;
+			$("#bw").val() = dollar/dollarBw;
+			$("#kleidung").val() = dollar/dollarKleidung;
+			
+			/*if (pwValue === "1234") {
 				$("fieldset").fadeOut(600, function () {
 					location = "pages/home.html";
                         });
 			}
 			else {
 				alert("Ungültiges Passwort");
-			}
+			}*/
 		}
 		else {
 			alert("Ungültiger Benutzername");
 		}
 	}
-	
-	
-		
-	
 });
-
+/*
 /**
  * find the currency and calculate the amount
  * @param jsonData
- */
+ *
 function convert(jsonData) {
 	
-}
+}*/
