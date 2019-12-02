@@ -111,6 +111,10 @@ input {
 	border: solid gray 1px;
 }
 
+#brot, #dollar {
+	background-color: white !important;
+}
+
 /* Quellen */
 .quellen .container a {
 	text-decoration: none !important;
