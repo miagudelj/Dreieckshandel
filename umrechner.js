@@ -5,53 +5,12 @@
  * @since   2019-12-01
  * @version 1.0
  */
-/*$(document).ready(function()    {
-	
-	$("#calculate").on("click", function() {
-		
-		// ajax call to https://api.exchangeratesapi.io/latest
-		 $.ajax({
  
-        // The URL for the request
-        url: "https://api.exchangeratesapi.io/latest",
- 
-        // Whether this is a POST or GET request
-        type: "GET",
- 
-        // The type of data we expect back
-        dataType: "json",
-		
-		success: function (jsonData) {
-			
-	var currencyInput = $('#currency').val();
-
-	if (currencyInput === "CHF") {
-		$("#result").val($("#result")*$("#rate").val(jsonData.rates.CHF));
-		$("#rate").val(jsonData.rates.CHF);
-	}
-		},
-		
-		error: function (xhr, status, errorThrown) {
-			alert("Error");
-		}
-    });
-	// // Code to run if the request succeeds (is done);
-    // // The response is passed to the function
-	// .done(function (jsonData) {
-		// alert("hello");
-	// });
-	// // Code to run if the request fails; the raw request and
-    // // status codes are passed to the function
-	// .fail(function (xhr, status, errorThrown) {
-		// alert("Error");
-	// });
-});
-
-});*/
-$(document).ready(function()    {
+$(document).ready(function() {
 	
 	// jquery event attachment 
-	$("#currency").click(calculate);
+	$("#calculate").click(calculate);
+	$("#reset").click(reset);
 	
 	function calculate(){
 		
@@ -63,45 +22,71 @@ $(document).ready(function()    {
 		var kleidung = $("#kleidung").val();
 		
 		// values
-		var dollerSkl = 50.25;
-		var dollarRum = 110.038;
-		var dollarRz = 0.23148;
-		var dollarBw = 5.39;
-		var dollarKleidung = 0.68508;
+		const dollarSkl = 50.25;
+		const dollarRum = 110.038;
+		const dollarRz = 0.23148;
+		const dollarBw = 5.39;
+		const dollarKleidung = 0.68508;
 		
-		var brot = 0.24;
+		const brot = 0.24;
 		
-		var dollar = $("#dollar").val();
+		var preis = $("#dollar").val();
 		
-		//console.log("INFOS: " + sklaven + ";" + rz + ";" + rum + ";" + bw + ";" + kleidung);
+		console.log("INFOS: " + sklaven + ";" + rz + ";" + rum + ";" + bw + ";" + kleidung);
 		
-		if (sklaven >= 1) {
-			
-			$("#dollar").val() === sklaven*dollarSkl;
-			$("#rz").val() == dollar/dollarRz;
-			$("#rum").val() = dollar/dollarRum;
-			$("#bw").val() = dollar/dollarBw;
-			$("#kleidung").val() = dollar/dollarKleidung;
-			
-			/*if (pwValue === "1234") {
-				$("fieldset").fadeOut(600, function () {
-					location = "pages/home.html";
-                        });
-			}
-			else {
-				alert("Ungültiges Passwort");
-			}*/
+		if (sklaven > 0) {
+			$("#dollar").val(sklaven * dollarSkl);
+			$("#rz").val(preis / dollarRz);
+			$("#rum").val(preis / dollarRum);
+			$("#bw").val(preis / dollarBw);
+			$("#kleidung").val(preis / dollarKleidung);
+			$("#brot").val(preis / brot);
+		}
+		else if (rz > 0)	{
+			$("#dollar").val(rz * dollarRz);
+			$("#skl").val(preis / dollarSkl);
+			$("#rum").val(preis / dollarRum);
+			$("#bw").val(preis / dollarBw);
+			$("#kleidung").val(preis / dollarKleidung);
+			$("#brot").val(preis / brot);
+		}
+		else if (rum > 0)	{
+			$("#dollar").val(rum * dollarRum);
+			$("#skl").val(preis / dollarSkl);
+			$("#rz").val(preis / dollarRz);
+			$("#bw").val(preis / dollarBw);
+			$("#kleidung").val(preis / dollarKleidung);
+			$("#brot").val(preis / brot);
+		}
+		else if (bw > 0)	{
+			$("#dollar").val(bw * dollarBw);
+			$("#skl").val(preis / dollarSkl);
+			$("#rz").val(preis / dollarRz);
+			$("#rum").val(preis / dollarRum);
+			$("#kleidung").val(preis / dollarKleidung);
+			$("#brot").val(preis / brot);
+		}
+		else if(kleidung > 0)	{
+			$("#dollar").val(kleidung * dollarKleidung);
+			$("#skl").val(preis / dollarSkl);
+			$("#rz").val(preis / dollarRz);
+			$("#rum").val(preis / dollarRum);
+			$("#bw").val(preis / dollarBw);
+			$("#brot").val(preis / brot);
 		}
 		else {
-			alert("Ungültiger Benutzername");
+			
 		}
 	}
-});
-/*
-/**
- * find the currency and calculate the amount
- * @param jsonData
- *
-function convert(jsonData) {
 	
-}*/
+	function reset() {
+		brot = 0;
+		preis = $("#dollar").val(0);
+		sklaven = $("#skl").val(0);
+		rz = $("#rz").val(0);
+		rum = $("#rum").val(0);
+		bw = $("#bw").val(0);
+		kleidung = $("#kleidung").val(0);
+		brot = $("#brot").val(0);
+	}
+});
