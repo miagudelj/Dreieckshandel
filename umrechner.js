@@ -32,7 +32,7 @@ $(document).ready(function() {
 		
 		var preis = $("#dollar").val();
 		
-		console.log("INFOS: " + sklaven + ";" + rz + ";" + rum + ";" + bw + ";" + stoff);
+		//console.log("INFOS: " + sklaven + ";" + rz + ";" + rum + ";" + bw + ";" + stoff);
 		
 		if (sklaven > 0) {
 			$("#dollar").val(sklaven * dollarSkl);
