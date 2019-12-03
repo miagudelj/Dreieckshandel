@@ -121,6 +121,10 @@ input {
 	color: blue !important;
 }
 
+.hint {
+	color: red !important;
+	font-style: italic !important;
+}
 
 footer .container {
     margin-top: 5% !important;
